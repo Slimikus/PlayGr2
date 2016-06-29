@@ -53,7 +53,21 @@ var array2: Array<String> = ["1","2","3"]
 var arayOBJC = NSArray(objects: 1,2,3,4)
 
 var arayOBJC_Mutable = NSMutableArray(objects: 1,2,3,4)
-arayOBJC_Mutable
+arayOBJC_Mutable.addObject("123")
+arayOBJC_Mutable.removeObject(1)
 
+
+// Словари
+
+var dict: Dictionary<String, String> = ["собака":"гав-гав","кошка":"мяу-мяу","утка":"кря-кря"]
+dict.updateValue("мяуууу", forKey: "кошка")
+dict.updateValue("", forKey: "рыба")
+dict["собака"] = "гав-гав-гав"
+dict
+
+var dict2: [String: String] = ["DDD": "eredf"]
+
+var dictOBJC_M = NSMutableDictionary(objects: [1, 2, 3, 4], forKeys: ["1", "2", "3", "4"])
+dictOBJC_M.setObject(6, forKey: "6")
 
 
