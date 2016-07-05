@@ -20,3 +20,15 @@ if isArtionPositiv {
 } else {
     karmaPoints -= 1
 }
+
+var action = "Подарить подарок"
+switch action {
+    case "Пнуть под зад друга":
+        karmaPoints -= 3
+    case "Подарить подарок":
+        karmaPoints += 5
+    case "Сделать комплимент девушке":
+        karmaPoints += 3
+    default:
+        karmaPoints += 0
+}
