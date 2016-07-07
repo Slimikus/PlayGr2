@@ -31,3 +31,14 @@ func Multy(param1: Int, _ param2: Int) -> Int {
 
 let m = Multy(2, 5)
 
+func addStringToItSet(str: String, int: Int) -> String {
+    var returnString = ""
+    
+    let mult = Multy(int, 2)
+    for _ in 1...mult {
+        returnString = returnString + str
+    }
+    return returnString
+}
+
+addStringToItSet("Mama", int: 3)
