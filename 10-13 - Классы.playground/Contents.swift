@@ -64,6 +64,20 @@ girl1.sayHello("Petya")
 class Workout {
     var exercises: [String: Int]
     
+    var workoutName = "My workout" {
+        willSet {
+            print("Current worcout name = \(workoutName)")
+            print(newValue)
+        }
+        didSet(value) {
+            //if workoutName.containsString("fuck") {
+                workoutName = workoutName.stringByReplacingOccurrencesOfString("fuck", withString: "****")
+            //}
+            print("Current worcout name = \(workoutName)")
+            print(value)
+        }
+    }
+    
     var countRepotitions: Int {
         get {
             var countRep = 0
@@ -93,6 +107,21 @@ w.exercises
 w.countRepotitions
 w.countRepotitions = 120
 w.exercises
+
+
+// Наблюдатели
+
+w.workoutName = "My new fucking workout"
+w.workoutName
+
+
+
+
+
+
+
+
+
 
 
 
