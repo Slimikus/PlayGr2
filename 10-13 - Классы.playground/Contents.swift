@@ -59,10 +59,40 @@ var girl1 = Girl(hc: UIColor.darkTextColor())
 girl1.name = nil
 girl1.sayHello("Petya")
 
+// Вычисляемые свойства
 
+class Workout {
+    var exercises: [String: Int]
+    
+    var countRepotitions: Int {
+        get {
+            var countRep = 0
+            for (_, value) in exercises {
+                countRep = countRep + value
+            }
+            return countRep
+        }
+        set(newValue) {
+            
+            var newExercises: [String: Int] = Dictionary()
+            for (key, _) in exercises{
+                newExercises.updateValue(newValue / exercises.count, forKey: key)
+            }
+            exercises = newExercises
+            //print(value)
+        }
+    }
+    
+    init(exercises: Dictionary<String, Int>) {
+        self.exercises = exercises
+    }
+}
 
-
-
+var w = Workout(exercises: ["Приседания": 20, "Пресс": 30, "Отжимания": 10])
+w.exercises
+w.countRepotitions
+w.countRepotitions = 120
+w.exercises
 
 
 
