@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func button(sender: AnyObject) {
+        
+        labal.text = "Hello, World!!"
+        
+    }
+    @IBOutlet weak var labal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
